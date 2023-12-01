@@ -7,7 +7,4 @@ router.post("/login", controllers.auth.login);
 router.get("/logout", controllers.auth.logout);
 router.post("/signup", controllers.user.create);
 
-//golfer
-router.get('/golferData', controllers.golfer.golferData);
-
 module.exports = router;

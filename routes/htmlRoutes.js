@@ -20,5 +20,10 @@ router.get("/private", checkAuth, ({ session: { isLoggedIn } }, res) => {
   res.render("protected", { isLoggedIn });
 });
 
+//render fox types
+router.get('/', async (req, res) => {
+  const [rows] = await db.query('SELECT * FROM foxtypes;')
+  res.render('index',{rows})
+})
 
 module.exports = router;

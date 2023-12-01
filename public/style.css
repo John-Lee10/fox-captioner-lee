@@ -1,12 +1,12 @@
 :root {
-  --black: #020303;
-  --dark-grey: #171c1c;
-  --light-grey: #a7b9b7;
-  --primary: #5cc1bb;
-  --primary-dark: #41aaa3;
-  --secondary: hsl(15deg 100% 62%);
-  --secondary-light: hsl(15deg 100% 70%);
-  --text-color: #f5fffe;
+  --orange: #ff7b00;
+  --dark-grey: #303030;
+  --light-grey: #c2bfbf;
+  --primary: #e8e8e8;
+  --primary-dark: #eeeeee;
+  --secondary: rgb(255, 221, 0);
+  --secondary-dark: rgb(255, 128, 0);
+  --text-color: #ffffff;
   --space: 16px;
   --font-size: 18px;
 }
@@ -29,7 +29,8 @@ main {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  background-color: var(--black);
+  margin-bottom: 30px;
+  background-color: var(--light-grey);
   padding: var(--space) calc(var(--space) * 3);
   text-align: center;
 }
@@ -38,6 +39,7 @@ main,
 main form {
   border-radius: 4px;
 }
+
 
 h1 {
   font-size: calc(var(--font-size) * 2.25);
@@ -50,7 +52,7 @@ h3 {
 }
 
 a {
-  color: var(--secondary-light);
+  color: var(--secondary-dark);
   transition: color 200ms;
 }
 a:hover,
@@ -61,7 +63,7 @@ a:focus {
 button.btn {
   border: var(--text-color);
   border-radius: 4px;
-  background-color: var(--secondary-light);
+  background-color: var(--secondary-dark);
   padding: calc(var(--space) * 0.75) calc(var(--space) * 2);
   cursor: pointer;
   transition: background-color 200ms;
@@ -87,7 +89,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--black);
+  background-color: var(--text-color);
   margin-bottom: calc(var(--space) * 6);
 }
 header a {
@@ -101,7 +103,7 @@ header .site-logo {
 
 .site-logo {
   text-align: center;
-  color: var(--text-color);
+  color: var(--orange);
   text-decoration: none;
   margin: calc(var(--space) * 4) auto;
   display: block;
@@ -117,7 +119,7 @@ header .site-logo {
 }
 
 .login-form .login-error {
-  color: var(--secondary-light);
+  color: var(--secondary-dark);
 }
 
 .login-form input {

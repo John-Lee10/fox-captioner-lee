@@ -1,13 +1,45 @@
 {{> header}}
 <main>
-  <h1>This is the home page!</h1>
-  <p>Currently, you are {{#unless isLoggedIn}} NOT {{/unless}} logged in.</p>
-  <p>You should {{#unless isLoggedIn}}NOT{{/unless}} be able to access <a href="/private">this page</a>.</p>
-  <p>Use the header above to {{#if isLoggedIn}} logout{{else}} login or create an account{{/if}}.</p>
   {{#if isLoggedIn}}
-  <h2>GOLF TRACKER</h2>
-  <p>{{golferData}}</p>
+    <h1>Fox Types:</h1>
+  {{#each rows}}
+    <p>{{breed}}</p>
+  {{/each}}
+  <h2>Add A Caption</h2>
+  <p>Feel free to screenshot your picture and caption when finished!</p>
+  <script>
+    fetch('/fox')
+    .then(res => {
+      if (res.status === 200)
+        return res.json()
+      else
+        throw new Error('not available')
+    })
+    .then(data => {
+      console.log(data)
+      document.body.innerHTML += 
+      `<center>
+      <img src="${data.image}" 
+      alt="fox_picture" 
+      height="600"
+      </img>
+      </center>`
+    })
+    .catch(err => {
+      document.body.innerHTML += `<h2>${err.message}</h2>`
+    })
+  </script>
+  <form action="/foxcaption" method="POST">
+    <label for="add">Add Caption:</label>
+    <input type="text" name="foxcaption" id="add" />
+    <button type = "submit">Add</button>
+  </form>
+  <ul>
+    {{#each foxcaptions}}
+      <li>{{captiontext}}</li>
+    {{/each}}
+  </ul>
   {{else}}
-  <h2>LOGGED OUT</h2>
+  <h1>You are currently logged out. Log in or sign up now to start captioning your own fox pictures! </h1>
   {{/if}}
 </main>
