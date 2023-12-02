@@ -1,4 +1,5 @@
 const User = require("./User");
+const Foxtypes = require("./Foxtypes")
 
-module.exports = { User };
+module.exports = { User, Foxtypes};
 

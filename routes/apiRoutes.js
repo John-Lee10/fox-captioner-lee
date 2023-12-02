@@ -7,4 +7,7 @@ router.post("/login", controllers.auth.login);
 router.get("/logout", controllers.auth.logout);
 router.post("/signup", controllers.user.create);
 
+//fox
+router.get("/foxtypes", controllers.foxtypes.renderfox);
+
 module.exports = router;

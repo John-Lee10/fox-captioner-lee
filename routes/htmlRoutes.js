@@ -20,10 +20,16 @@ router.get("/private", checkAuth, ({ session: { isLoggedIn } }, res) => {
   res.render("protected", { isLoggedIn });
 });
 
-//render fox types
-router.get('/', async (req, res) => {
-  const [rows] = await db.query('SELECT * FROM foxtypes;')
-  res.render('index',{rows})
-})
+///////////////render fox types from schema
+// router.get('/', async (req, res) => {
+//   const [rows] = await db.query('SELECT * FROM foxtypes;')
+//   res.render('index',{rows})
+// })
+////////////didnt work
+
+//render foxtypes from controllers
+router.get("/foxtypes", async (req, res) => {
+  res.render("index", { rows });
+});
 
 module.exports = router;

@@ -2,9 +2,11 @@
 <main>
   {{#if isLoggedIn}}
     <h1>Fox Types:</h1>
+  <ul>
   {{#each rows}}
-    <p>{{breed}}</p>
+    <li>{{breed}}</li>
   {{/each}}
+  </ul>
   <h2>Add A Caption</h2>
   <p>Feel free to screenshot your picture and caption when finished!</p>
   <script>
@@ -34,12 +36,10 @@
     <input type="text" name="foxcaption" id="add" />
     <button type = "submit">Add</button>
   </form>
-  <ul>
     {{#each foxcaptions}}
-      <li>{{captiontext}}</li>
+      <p>This fox says: {{captiontext}}</p>
     {{/each}}
-  </ul>
   {{else}}
-  <h1>You are currently logged out. Log in or sign up now to start captioning your own fox pictures! </h1>
+  <h1>You are currently logged out. Login or sign up now to start captioning your own fox pictures! </h1>
   {{/if}}
 </main>
