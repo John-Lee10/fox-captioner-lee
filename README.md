@@ -19,7 +19,7 @@ The caption will then appear above the picture and the user can either decide to
 <img src= public/images/readme_screenshot3.png>
 
 ## Challenges and Issues
-There were struggles with getting the sumbit form to function correctly. I also had issues with connecting code between the models, controllers, and views files and at times didn't know where to put specific code.
+There were struggles with getting the sumbit form to function correctly. I also had issues with connecting code between the models, controllers, and views files and at times didn't know where to put specific code. I also spent too much time and effort early on in the production process going through a trial and error process to decide on my project idea as well as if I should use MySQL or MongoDB.
 
 ## API
 https://randomfox.ca
