@@ -18,6 +18,8 @@ The user may then enter a caption for this specific picture.
 The caption will then appear above the picture and the user can either decide to screenshot their created caption with the fox image for their own personal use, or refresh the page and start again.
 <img src= public/images/readme_screenshot3.png>
 
+## Challenges and Issues
+There were struggles with getting the sumbit form to function correctly. I also had issues with connecting code between the models, controllers, and views files and at times didn't know where to put specific code.
 
 ## API
 https://randomfox.ca
